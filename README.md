@@ -1,4 +1,4 @@
-# Tên Dự Án (Ví dụ: Dự đoán Customer Lifetime Value - CLV và Phân tích khách hàng)
+# Predict Hit Song from Spotify - Depend on Artist 
 
 Dự án này sử dụng Python để phân tích dữ liệu khách hàng, từ đó tính toán các chỉ số marketing quan trọng và dự đoán hành vi mua hàng trong tương lai.
 
