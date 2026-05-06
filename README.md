@@ -8,10 +8,10 @@ Dự án được thực hiện bởi nhóm [Tên Nhóm], với sự đóng góp
 
 | Họ và Tên | Vai trò | Chi tiết công việc thực hiện |
 | :--- | :--- | :--- |
-| **Nguyễn Tuấn [Tên bạn]** | Trưởng nhóm / Data Analyst | Tìm kiếm dữ liệu, lên ý tưởng, và viết file `01_KhamPhaDuLieu.ipynb` để trực quan hóa dữ liệu gốc. |
-| **[Tên thành viên 2]** | Data Engineer | Phụ trách file `02_LamSachDuLieu.ipynb`, xử lý missing values, loại bỏ outliers và xuất ra file data chuẩn. |
-| **[Tên thành viên 3]** | Machine Learning Engineer | Viết file `03_HuanLuyenModel.ipynb`, chạy thuật toán phân đoán và tổng hợp kết quả độ chính xác. |
-| **[Tên thành viên 3]** | Machine Learning Engineer | Viết file `03_HuanLuyenModel.ipynb`, chạy thuật toán phân đoán và tổng hợp kết quả độ chính xác. |
+| **Đỗ Minh Huyền** | Trưởng nhóm / Data Analysist | Tìm kiếm dữ liệu, lên ý tưởng, và viết file `02_EDA.ipynb` để trực quan hóa dữ liệu gốc. |
+| **Trần Huệ Chi** | Data Analysist | Viết file `02_EDA.ipynb`,để trực quan hóa dữ liệu gốc. |
+| **Phạm Ngọc Yến Nhi** |Data Cleaner | Viết file `01_Loading & Cleaning.ipynb`, xử lý missing values, loại bỏ outliers và xuất ra file data chuẩn |
+| **Nguyễn Huyền Trang** |Data Cleaner | Viết file `01_Loading & Cleaning.ipynb`,, xử lý missing values, loại bỏ outliers và xuất ra file data chuẩn |
 
 
 ## 📂 Cấu trúc Repository 
