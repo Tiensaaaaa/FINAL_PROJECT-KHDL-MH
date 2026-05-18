@@ -14,7 +14,7 @@ Dự án được thực hiện bởi nhóm [Tên Nhóm], với sự đóng góp
 | **Nguyễn Huyền Trang** |Data Cleaner | Viết file `01_Loading & Cleaning.ipynb`,, xử lý missing values, loại bỏ outliers và xuất ra file data chuẩn |
 
 
-## Architecture
+## 1. Architecture
 
 ```text
 Raw Spotify Track Data
@@ -48,8 +48,9 @@ Evaluation
         ▼
 Final Model & Key Findings
 (Tuned Random Forest for Hit Song Prediction)
+```
 
-## Goal
+## 2. Goal
 
 The goal of this project is to build a machine learning model that predicts whether a Spotify track is likely to become a **Hit** based on artist, album, genre, release, and track-level features.
 
@@ -66,7 +67,7 @@ Therefore, the project focuses more on **Recall**, **F1-score**, and **ROC-AUC**
 
 ---
 
-## 2. Data
+## 3. Data
 
 The project uses a Spotify track dataset containing information about tracks, artists, albums, genres, popularity, release dates, and duration.
 
@@ -102,7 +103,7 @@ The final model uses a **time-based train-validation-test split**. This is more 
 
 ---
 
-## 3. Evaluation Metrics
+## 4. Evaluation Metrics
 
 Since the dataset is imbalanced, accuracy alone can be misleading. A model may achieve high accuracy by predicting most songs as `Not Hit`, but this does not help identify actual hit songs.
 
@@ -122,7 +123,7 @@ For this project, **Hit Recall** and **Hit F1-score** are especially important b
 
 ---
 
-## 4. Results
+## 5. Results
 
 ### Model comparison
 
@@ -155,7 +156,7 @@ The final model correctly detected **83 out of 146 actual Hit tracks** in the te
 
 ---
 
-## 5. Key Findings
+## 6. Key Findings
 
 1. **Accuracy is not the best metric for this project.**  
    The Logistic Regression baseline achieved high accuracy of **93.13%**, but its Hit Recall and Hit F1-score were both **0.0000**. This means the model almost completely ignored the Hit class.
@@ -184,7 +185,7 @@ The final model correctly detected **83 out of 146 actual Hit tracks** in the te
 
 ---
 
-## 6. Conclusion
+## 7. Conclusion
 
 This project shows that predicting hit songs is challenging because Hit tracks make up a small proportion of the dataset. Baseline models achieved high accuracy but performed poorly on the minority class.
 
