@@ -8,10 +8,10 @@ Dự án được thực hiện bởi nhóm [Tên Nhóm], với sự đóng góp
 
 | Họ và Tên | Vai trò | Chi tiết công việc thực hiện |
 | :--- | :--- | :--- |
-| **Đỗ Minh Huyền** | Trưởng nhóm / Data Analysist | Tìm kiếm dữ liệu, lên ý tưởng, và viết file `02_EDA.ipynb` để trực quan hóa dữ liệu gốc. |
-| **Trần Huệ Chi** | Data Analysist | Viết file `02_EDA.ipynb`,để trực quan hóa dữ liệu gốc. |
-| **Phạm Ngọc Yến Nhi** |Data Cleaner | Viết file `01_Loading & Cleaning.ipynb`, xử lý missing values, loại bỏ outliers và xuất ra file data chuẩn |
-| **Nguyễn Huyền Trang** |Data Cleaner | Viết file `01_Loading & Cleaning.ipynb`,, xử lý missing values, loại bỏ outliers và xuất ra file data chuẩn |
+| **Đỗ Minh Huyền** | Trưởng nhóm / Data Analysist | Finding data, lên ý tưởng, và viết baseline trong file `2.Data clean & preprocessing.ipynb` and write Model Tunning and Final Model in file `5.Model.ipynb` |
+| **Trần Huệ Chi** | Data Analysist / Data Cleaner |Finding data, Viết file `3.EDA.ipynb`để trực quan hóa dữ liệu gốc và file `5.Model.ipynb`. |
+| **Phạm Ngọc Yến Nhi** |Data Cleaner/ Data Analysist | Finding data, Write file `1.Importing library & loading data.ipynb`, file `4.Feature Engineering` và phần Pipline, data spliting trong file `5.Model.ipynb`  |
+| **Nguyễn Huyền Trang** |Data Cleaner / Data Analysist |Finding data, Write file `2.Data clean & preprocessing.ipynb`, cleaning raw data, check logic, drop unnecessary columns and write file Readme |
 
 
 ## 1. Architecture
