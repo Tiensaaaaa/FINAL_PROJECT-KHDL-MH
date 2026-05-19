@@ -58,7 +58,7 @@ The goal of this project is to build a machine learning model that predicts whet
 In this project, the target variable is defined as:
 
 | Class | Meaning | Condition |  Target Distribution |
-|---|---|---|
+|---|---|---|---|
 | `0` | Not Hit | `track_popularity <= 80` | 7,990 (~93.1%) |
 | `1` | Hit | `track_popularity > 80` | 592 (~6.9%) |
 
@@ -136,7 +136,7 @@ For this project, **Hit Recall** and **Hit F1-score** are especially important b
 ### Model comparison
 
 | Model | Type | Accuracy | Hit Precision | Hit Recall | Hit F1-score | Notes |
-|---|---|---:|---:|---:|---:|---:|---|
+|---|---|---:|---:|---:|---:|---|
 | Logistic Regression | Baseline | 0.9313 | 0.0000 | 0.0000 | 0.0000 | High accuracy but failed to detect Hit tracks |
 | Random Forest | Baseline | 0.9301 | 0.4600 | 0.0900 | 0.1500 | Detected some Hit tracks, but recall was still low |
 | **Tuned Random Forest** | Main Model | 0.7721 | 0.2427 | 0.5685 | 0.3402 | Best model for identifying Hit tracks |
