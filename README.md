@@ -21,9 +21,10 @@ Raw Spotify Track Data
         │
         ▼
 Data Cleaning & Invalid Value Filtering
+(Missing values, Datatype, Drop duplicate )
         │
         ▼
-Feature Engineering
+Feature Engineering 
 (duration_category / popularity_category / genre_group)
         │
         ▼
@@ -35,7 +36,7 @@ Preprocessing Transformer
         │
         ▼
 Baseline Models
-(Dummy Classifier / Simple Models)
+(Random Forest, Logistic Regression)
         │
         ▼
 Machine Learning Models
@@ -56,10 +57,10 @@ The goal of this project is to build a machine learning model that predicts whet
 
 In this project, the target variable is defined as:
 
-| Class | Meaning | Condition |
+| Class | Meaning | Condition |  Target Distribution |
 |---|---|---|
-| `0` | Not Hit | `track_popularity <= 80` |
-| `1` | Hit | `track_popularity > 80` |
+| `0` | Not Hit | `track_popularity <= 80` | 7,990 (~93.1%) |
+| `1` | Hit | `track_popularity > 80` | 592 (~6.9%) |
 
 Because the dataset is imbalanced, the main objective is not only to maximize accuracy, but also to improve the model’s ability to correctly identify the minority class, which is the **Hit** class.
 
@@ -70,7 +71,7 @@ Therefore, the project focuses more on **Recall**, **F1-score**, and **ROC-AUC**
 ## 3. Data
 
 The project uses a Spotify track dataset containing information about tracks, artists, albums, genres, popularity, release dates, and duration.
-
+- link data: ... 
 After data cleaning and preprocessing, the final dataset contains:
 
 | Item | Value |
@@ -81,7 +82,7 @@ After data cleaning and preprocessing, the final dataset contains:
 | Prediction task | Binary classification |
 | Main positive class | `Hit` |
 
-### Main groups of variables
+### 3.1. Main groups of variables
 
 | Variable group | Examples | Purpose |
 |---|---|---|
@@ -91,9 +92,18 @@ After data cleaning and preprocessing, the final dataset contains:
 | Release information | `release_year`, `release_month`, `song_age`, `is_recent_song` | Capture time-related effects |
 | Engineered features | `artist_power_score`, `artist_pop_x_followers`, `duration_x_artist_pop`, genre indicators | Improve model learning by adding interaction and transformed features |
 
-### Data splitting strategy
+
+### 3.2. Metrics strategy
+
+- Vấn đề: Our data is highly imbalance (is hit ~ 7%, not hit ~ 93%) => Accuray nó sẽ làm sao ...
+- Thus we employ Metrics .... 
+- Precision/ F1-score nó tập trung vào dự đoán cái is_hit = 1
+
+### 3.2. Data splitting strategy
 
 The final model uses a **time-based train-validation-test split**. This is more realistic because the model learns from older songs and is tested on newer songs.
+
+- Không dùng Random_state (tại vì data dạng time series), dùng stratify=y (do dataset imbalance)  
 
 | Dataset | Year range | Number of rows | Hit rate |
 |---|---:|---:|---:|
@@ -114,10 +124,8 @@ The project uses the following evaluation metrics:
 | Accuracy | Correct predictions / Total predictions | Measures overall prediction correctness |
 | Precision | TP / (TP + FP) | Shows how many predicted Hit songs are actually Hit |
 | Recall | TP / (TP + FN) | Shows how many actual Hit songs the model can detect |
-| F1-score | Harmonic mean of Precision and Recall | Balances Precision and Recall, especially useful for imbalanced data |
+| **F1-score (priority/ main metric)** | Harmonic mean of Precision and Recall | Balances Precision and Recall, especially useful for imbalanced data |
 | ROC-AUC | Area under ROC curve | Measures the model’s ability to separate Hit and Not Hit classes |
-| Log Loss | Penalizes wrong probability predictions | Evaluates probability quality |
-| Brier Score | Mean squared error of predicted probabilities | Measures calibration of predicted probabilities |
 
 For this project, **Hit Recall** and **Hit F1-score** are especially important because the main goal is to find potential hit songs.
 
@@ -127,11 +135,13 @@ For this project, **Hit Recall** and **Hit F1-score** are especially important b
 
 ### Model comparison
 
-| Model | Type | Accuracy | Hit Precision | Hit Recall | Hit F1-score | ROC-AUC | Notes |
+| Model | Type | Accuracy | Hit Precision | Hit Recall | Hit F1-score | Notes |
 |---|---|---:|---:|---:|---:|---:|---|
-| Logistic Regression | Baseline | 0.9313 | 0.0000 | 0.0000 | 0.0000 | N/A | High accuracy but failed to detect Hit tracks |
-| Random Forest | Baseline | 0.9301 | 0.4600 | 0.0900 | 0.1500 | N/A | Detected some Hit tracks, but recall was still low |
-| Tuned Random Forest | Main Model | 0.7721 | 0.2427 | 0.5685 | 0.3402 | 0.8009 | Best model for identifying Hit tracks |
+| Logistic Regression | Baseline | 0.9313 | 0.0000 | 0.0000 | 0.0000 | High accuracy but failed to detect Hit tracks |
+| Random Forest | Baseline | 0.9301 | 0.4600 | 0.0900 | 0.1500 | Detected some Hit tracks, but recall was still low |
+| **Tuned Random Forest** | Main Model | 0.7721 | 0.2427 | 0.5685 | 0.3402 | Best model for identifying Hit tracks |
+
+- Nhận xét ngắn metrics của Tuned model, ... 
 
 ### Final model metrics
 
@@ -164,9 +174,9 @@ The final model correctly detected **83 out of 146 actual Hit tracks** in the te
 2. **The final tuned Random Forest model improves Hit detection significantly.**  
    Compared with the baseline Random Forest model:
 
-   | Metric | Baseline Random Forest | Tuned Random Forest | Change |
+   | Metric | Baseline Random Forest | **Tuned Random Forest** | Change |
    |---|---:|---:|---:|
-   | Hit Recall | 0.0900 | 0.5685 | +0.4785 points / +531.67% |
+   | Hit Recall | 0.0900 | 0.5685 | **+0.4785 points / +531.67%** |
    | Hit F1-score | 0.1500 | 0.3402 | +0.1902 points / +126.80% |
    | Accuracy | 0.9301 | 0.7721 | -0.1580 points / -16.99% |
    | Hit Precision | 0.4600 | 0.2427 | -0.2173 points / -47.24% |
@@ -179,6 +189,11 @@ The final model correctly detected **83 out of 146 actual Hit tracks** in the te
 
 5. **Artist-related features are the strongest predictors.**  
    The most important features are mainly related to artist popularity and audience size, such as `artist_followers_log`, `artist_is_popular`, `artist_popularity`, `artist_followers`, and `artist_pop_x_followers`.
+
+6. 
+- Popular artis has many followers thường bài dễ hit => fanbase lớn
+- Album type/ Track
+- Genre (Genre, )
 
 6. **The final model is more useful in practice.**  
    A high-accuracy model that cannot detect Hit songs has limited value. The tuned Random Forest is more practical because it can identify more potential Hit tracks, even though it produces more false positives.
