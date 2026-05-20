@@ -79,8 +79,10 @@ convert release date, remove invalid popularity, duration, followers,
 and album track values)
         │
         ▼
-EDA
- │
+Exploratory Data Analysis (EDA)
+(analyze data distribution, class imbalance, relationships between features, 
+and music-related patterns before building models)
+        │
         ▼
 Baseline Models
 (Random Forest, Logistic Regression)
