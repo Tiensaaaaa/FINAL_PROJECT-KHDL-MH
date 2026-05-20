@@ -79,6 +79,13 @@ convert release date, remove invalid popularity, duration, followers,
 and album track values)
         │
         ▼
+EDA
+ │
+        ▼
+Baseline Models
+(Random Forest, Logistic Regression)
+        │
+        ▼
 Feature Engineering 
 (create new features such as duration_category, popularity_category, 
 artist_followers_category, genre_group, release_year, album_type, 
@@ -90,10 +97,6 @@ Time-based Train / Validation / Test Split
         ▼
 Preprocessing Transformer
 (StandardScaler + OneHotEncoder + ColumnTransformer)
-        │
-        ▼
-Baseline Models
-(Random Forest, Logistic Regression)
         │
         ▼
 Machine Learning Models
