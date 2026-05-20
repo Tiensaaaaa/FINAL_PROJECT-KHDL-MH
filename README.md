@@ -230,6 +230,6 @@ The final model correctly detected **80 out of 146 actual Hit tracks** in the te
 
 This project shows that predicting hit songs is challenging because Hit tracks make up a small proportion of the dataset. Baseline models achieved high accuracy but performed poorly on the minority class.
 
-After applying feature engineering, time-based validation, class balancing, and Optuna hyperparameter tuning, the final Random Forest model achieved a much stronger ability to detect Hit tracks. The most important improvement is that **Hit Recall increased by 531.67%** and **Hit F1-score increased by 126.80%** compared with the baseline Random Forest model.
+After applying feature engineering, time-based validation, class balancing, and Optuna hyperparameter tuning, the final Random Forest model achieved a much stronger ability to detect Hit tracks. The most important improvement is that **Hit Recall increased by 508.78%** and **Hit F1-score increased by 119.47%** compared with the baseline Random Forest model.
 
 Therefore, the final model is considered more suitable for the project goal of identifying potential hit songs.
