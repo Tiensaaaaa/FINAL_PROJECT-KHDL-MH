@@ -199,16 +199,16 @@ The final model correctly detected **80 out of 146 actual Hit tracks** in the te
 
    | Metric | Baseline Random Forest | **Tuned Random Forest** | Change |
    |---|---:|---:|---:|
-   | Hit Recall | 0.0900 | 0.5685 | **+0.4785 points / +531.67%** |
-   | Hit F1-score | 0.1500 | 0.3402 | **+0.1902 points / +126.80%** |
-   | Accuracy | 0.9301 | 0.7721 | -0.1580 points / -16.99% |
-   | Hit Precision | 0.4600 | 0.2427 | -0.2173 points / -47.24% |
+   | Hit Recall | 0.0900 | 0.5479 | **+0.4579 points / +508.78%** |
+   | Hit F1-score | 0.1500 | 0.3292 | **+0.1792 points / +119.47%** |
+   | Accuracy | 0.9301 | 0.7693 | -0.1608 points / -17.29% |
+   | Hit Precision | 0.4600 | 0.2353 | -0.2247 points / -48.85% |
 
 3. **The trade-off is acceptable for the project objective.**  
-   Although accuracy decreased from **0.9301** to **0.7721**, the model became much better at identifying actual Hit songs. This is more meaningful because the main goal of the project is to detect potential hits, not simply predict the majority class.
+   Although accuracy decreased from **0.9301** to **0.7693**, the model became much better at identifying actual Hit songs. This is more meaningful because the main goal of the project is to detect potential hits, not simply predict the majority class.
 
-4. **The model improved from detecting only 9% of Hit songs to detecting 56.85% of Hit songs.**  
-   The baseline Random Forest detected only **9%** of actual Hit songs, while the Tuned Random Forest detected **56.85%**. This shows that feature engineering, class imbalance handling, time-based splitting, and hyperparameter tuning helped the model perform better on the minority class `is_hit = 1`.
+4. **The model improved from detecting only 9% of Hit songs to detecting 54.79% of Hit songs.**  
+   The baseline Random Forest detected only **9%** of actual Hit songs, while the Tuned Random Forest detected **54.79%**. This shows that feature engineering, class imbalance handling, time-based splitting, and hyperparameter tuning helped the model perform better on the minority class `is_hit = 1`.
 
 5. **Artist-related features are the strongest predictors.**  
    Important features are mainly related to artist popularity and audience size, such as `artist_followers_log`, `artist_is_popular`, `artist_popularity`, `artist_followers`, and `artist_pop_x_followers`.  
@@ -224,7 +224,7 @@ The final model correctly detected **80 out of 146 actual Hit tracks** in the te
 
 8. **The final model is more useful in practice.**  
    A high-accuracy model that cannot detect Hit songs has limited practical value. The Tuned Random Forest is more useful because it can identify more potential Hit tracks, even though it produces more false positives.
-
+   
 ## 7. Conclusion
 
 This project shows that predicting hit songs is challenging because Hit tracks make up a small proportion of the dataset. Baseline models achieved high accuracy but performed poorly on the minority class.
