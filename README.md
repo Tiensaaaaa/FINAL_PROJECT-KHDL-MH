@@ -212,7 +212,7 @@ The final model correctly detected **80 out of 146 actual Hit tracks** in the te
 
 5. **Artist-related features are the strongest predictors.**  
    Important features are mainly related to artist popularity and audience size, such as `artist_followers_log`, `artist_is_popular`, `artist_popularity`, `artist_followers`, and `artist_pop_x_followers`.  
-   This suggests that songs by popular artists or artists with many followers are more likely to become Hits because they already have a large fanbase and higher initial audience reach.
+   This suggests that songs by **popular artists** or **artists with many followers** are more likely to become Hits because they already have a large fanbase and higher initial audience reach.
 
 6. **Album-related features also provide useful signals.**  
    Features such as `album_type` and `album_total_tracks` help explain how the release format affects hit potential.  
