@@ -16,7 +16,7 @@ Dự án được thực hiện bởi nhóm [Tên Nhóm], với sự đóng góp
 ## 1. Data
 
 The project uses a Spotify track dataset containing information about tracks, artists, albums, genres, popularity, release dates, and duration.
-- link data: https://github.com/Tiensaaaaa/FINAL_PROJECT-KHDL-MH/blob/main/Data/Raw/spotify_data.csv
+- link data: (https://www.kaggle.com/datasets/alyahmedts13/spotify-songs-for-ml-and-analysis-over-8700-tracks?select=spotify_data+clean.csv)
 After data cleaning and preprocessing, the final dataset contains:
 
 | Item | Value |
