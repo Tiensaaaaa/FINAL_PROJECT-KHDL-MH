@@ -2,7 +2,7 @@
 
 This project focuses on building a machine learning model to predict whether a Spotify track is likely to become a **Hit** based on track, artist, album, genre, and release-related information.
 
-## 👥 Thành viên nhóm & Phân công công việc
+## 👥 Team members and task assignments
 
 The project was carried out by Group 1, with each member contributing to specific tasks as follows:
 
