@@ -9,8 +9,8 @@ The project was carried out by Group 1, with each member contributing to specifi
 | :--- | :--- | :--- |
 | **Đỗ Minh Huyền** | Leader / Data Analysist | Finding data, Write file `3.Baseline_Model.ipynb`, Write Model Tunning and Final Model in file `5.Model.ipynb`, edit Readme, Format the notebook. |
 | **Trần Huệ Chi** | Data Analysist / Data Cleaner |Finding data, Write file `2.EDA.ipynb` to visualize the raw data and Write Feature importance and Saving Model in file `5.Model.ipynb`, Edit Readme. |
-| **Phạm Ngọc Yến Nhi** |Data Cleaner/ Data Analysist | Finding data, Write file `4.Feature Engineering` and Pipline, Data spliting parts in file `5.Model.ipynb`, Format the notebook.  |
-| **Nguyễn Huyền Trang** |Data Cleaner / Data Analysist |Finding data, Write file `1.Data clean & preprocessing.ipynb`, cleaning raw data, check logic, drop unnecessary columns and Edit file Readme. |
+| **Phạm Ngọc Yến Nhi** |Data Cleaner/ Data Analysist | Finding data, Write file `4.Feature_Engineering` and Pipline, Data spliting parts in file `5.Model.ipynb`, Format the notebook.  |
+| **Nguyễn Huyền Trang** |Data Cleaner / Data Analysist |Finding data, Write file `1.Data_Cleaning_and_Preprocessing.ipynb`, cleaning raw data, check logic, drop unnecessary columns and Edit file Readme. |
 
 ## 1. Data
 
