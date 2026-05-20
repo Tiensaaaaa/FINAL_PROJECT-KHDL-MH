@@ -154,11 +154,11 @@ For this project, **Hit Recall** and **Hit F1-score** are especially important b
 |---|---|---:|---:|---:|---:|---|
 | Logistic Regression | Baseline | 0.9313 | 0.0000 | 0.0000 | 0.0000 | High accuracy but failed to detect Hit tracks |
 | Random Forest | Baseline | 0.9301 | 0.4600 | 0.0900 | 0.1500 | Detected some Hit tracks, but recall was still low |
-| **Tuned Random Forest** | Main Model | 0.7721 | 0.2427 | 0.5685 | 0.3402 | Best model for identifying Hit tracks |
+| **Tuned Random Forest** | Main Model | 0.7693 | 0.2353 | 0.5479 | 0.3292 | Best model for identifying Hit tracks |
 
-The **Tuned Random Forest** achieved the best performance for detecting Hit tracks. Although its accuracy decreased to **0.7721**, this is acceptable because accuracy is not the main priority in this highly imbalanced dataset.
+The **Tuned Random Forest** achieved the best performance for detecting Hit tracks. Although its accuracy decreased to **0.7693**, this is acceptable because accuracy is not the main priority in this highly imbalanced dataset.
 
-Compared with the baseline models, the tuned model improved the ability to identify Hit songs much better. Its **Hit Recall increased to 0.5685**, meaning the model can detect more than half of the actual Hit tracks. Its **Hit F1-score reached 0.3402**, which is the highest among all models.
+Compared with the baseline models, the tuned model improved the ability to identify Hit songs much better. Its **Hit Recall increased to 0.5479**, meaning the model can detect more than half of the actual Hit tracks. Its **Hit F1-score reached 0.3292**, which is the highest among all models.
 
 This result shows that the tuned model is more suitable for this project because the main goal is not only to get high accuracy, but to improve prediction for the minority class `is_hit = 1`.
 
@@ -166,22 +166,22 @@ This result shows that the tuned model is more suitable for this project because
 
 | Metric | Value |
 |---|---:|
-| Accuracy | 0.7721 |
-| Hit Precision | 0.2427 |
-| Hit Recall | 0.5685 |
-| Hit F1-score | 0.3402 |
-| ROC-AUC | 0.8009 |
-| Log Loss | 0.4558 |
-| Brier Score | 0.1434 |
+| Accuracy | 0.7693 |
+| Hit Precision | 0.2353 |
+| Hit Recall | 0.5479 |
+| Hit F1-score | 0.3292 |
+| ROC-AUC | 0.8003 |
+| Log Loss | 0.4323 |
+| Brier Score | 0.1368 |
 
 ### Confusion matrix of final model
 
 | Actual / Predicted | Not Hit | Hit |
 |---|---:|---:|
-| Not Hit | 1,008 | 259 |
-| Hit | 63 | 83 |
+| Not Hit | 1,007 | 260 |
+| Hit | 66 | 80 |
 
-The final model correctly detected **83 out of 146 actual Hit tracks** in the test set.
+The final model correctly detected **80 out of 146 actual Hit tracks** in the test set.
 
 ---
 
