@@ -1,17 +1,16 @@
 # Predict Hit Song from Spotify - Depend on Artist 
 
-This project focuses on building a machine learning model to predict whether a Spotify track is likely to become a **Hit** based on track, artist, album, genre, and release-related information.
-
-## 👥 Team members and task assignments
+This project focuses on building a machine learning model to predict whether a Spotify track is likely to become a **Hit** based on track, artist, album, genre, and release-related information. This project can be applied in the music streaming and entertainment industry to support song success prediction, recommendation systems, and marketing strategies. By identifying tracks with high potential to become “Hit” songs, music platforms and producers can make more data-driven decisions regarding promotion, playlist recommendations, and audience targeting
+## 👥 Team Member & Task Allocation
 
 The project was carried out by Group 1, with each member contributing to specific tasks as follows:
 
 | Full Name | Role | Specific role |
 | :--- | :--- | :--- |
 | **Đỗ Minh Huyền** | Leader / Data Analysist | Finding data, Write file `3.Baseline_Model.ipynb`, Write Model Tunning and Final Model in file `5.Model.ipynb`, edit Readme, Format the notebook. |
-| **Trần Huệ Chi** | Data Analysist / Data Cleaner |Finding data, Write file `2.EDA.ipynb` to visualize the raw data and Write Feature importance and Saving Model in file `5.Model.ipynb`, edit Readme. |
+| **Trần Huệ Chi** | Data Analysist / Data Cleaner |Finding data, Write file `2.EDA.ipynb` to visualize the raw data and Write Feature importance and Saving Model in file `5.Model.ipynb`, Edit Readme. |
 | **Phạm Ngọc Yến Nhi** |Data Cleaner/ Data Analysist | Finding data, Write file `4.Feature Engineering` and Pipline, Data spliting parts in file `5.Model.ipynb`, Format the notebook.  |
-| **Nguyễn Huyền Trang** |Data Cleaner / Data Analysist |Finding data, Write file `1.Data clean & preprocessing.ipynb`, cleaning raw data, check logic, drop unnecessary columns and edit file Readme. |
+| **Nguyễn Huyền Trang** |Data Cleaner / Data Analysist |Finding data, Write file `1.Data clean & preprocessing.ipynb`, cleaning raw data, check logic, drop unnecessary columns and Edit file Readme. |
 
 ## 1. Data
 
